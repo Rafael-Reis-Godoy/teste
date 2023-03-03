@@ -1,0 +1,24 @@
+import tkinter as tk
+
+def exibir_texto():
+    texto = caixa_texto.get()
+    rotulo.config(text=texto)
+
+# Cria a janela
+janela = tk.Tk()
+janela.title("Exemplo Tkinter")
+
+# Cria a caixa de entrada
+caixa_texto = tk.Entry(janela)
+caixa_texto.pack()
+
+# Cria o botão
+botao = tk.Button(janela, text="Exibir", command=exibir_texto)
+botao.pack()
+
+# Cria o rótulo
+rotulo = tk.Label(janela, text="")
+rotulo.pack()
+
+# Inicia o loop de eventos da janela
+janela.mainloop()
